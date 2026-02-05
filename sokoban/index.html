@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>推箱子</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <a class="back" href="../index.html">返回</a>
+          <div>
+            <div class="title">推箱子</div>
+            <div class="subtitle">经典关卡挑战</div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="ghost" id="resetBtn">重新开始</button>
+          <button class="rules-btn" id="rulesBtn">规则</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">推箱子</div>
+              <div class="panel-desc">把所有箱子推到目标点</div>
+            </div>
+            <div class="panel-actions"></div>
+          </div>
+          <div class="game-area">
+            <div class="canvas-wrap">
+              <canvas id="gameCanvas" width="600" height="600"></canvas>
+            </div>
+            <div class="side-info">
+              <div class="status" id="statusText">推箱子</div>
+              <div class="hint" id="hintText">方向键或滑动移动</div>
+              <div class="sokoban-controls" id="sokobanControls">
+                <label for="levelSelect">关卡</label>
+                <select id="levelSelect"></select>
+                <button class="ghost" id="sokobanUndo">反悔</button>
+              </div>
+              <div class="legend" id="legend"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="rule-panel" id="rulePanel" aria-hidden="true">
+          <div class="rule-header">
+            <div class="rule-title">游戏规则</div>
+            <button class="close" id="closeRule">关闭</button>
+          </div>
+          <div class="rule-body" id="ruleBody"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

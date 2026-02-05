@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <a class="back" href="../index.html">返回</a>
+          <div>
+            <div class="title">贪吃蛇</div>
+            <div class="subtitle">穿越边界 · 墙体地图</div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="ghost" id="resetBtn">重新开始</button>
+          <button class="rules-btn" id="rulesBtn">规则</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">贪吃蛇</div>
+              <div class="panel-desc">点击棋盘开始，奖励限时加分</div>
+            </div>
+            <div class="panel-actions"></div>
+          </div>
+          <div class="game-area">
+            <div class="canvas-wrap">
+              <canvas id="gameCanvas" width="600" height="600"></canvas>
+            </div>
+            <div class="side-info">
+              <div class="status" id="statusText">贪吃蛇</div>
+              <div class="hint" id="hintText">点击棋盘开始</div>
+              <div class="snake-speed" id="snakeSpeedControl">
+                <label for="snakeSpeed">蛇速度</label>
+                <input id="snakeSpeed" type="range" min="60" max="200" step="10" value="140" />
+                <div class="speed-value" id="snakeSpeedValue">中速</div>
+              </div>
+              <div class="snake-maps" id="snakeMapControl">
+                <label for="snakeMap">蛇地图</label>
+                <select id="snakeMap"></select>
+              </div>
+              <div class="mini-controls" id="snakeControls">
+                <div class="ctrl-row">
+                  <button class="ctrl" data-dir="up">↑</button>
+                </div>
+                <div class="ctrl-row">
+                  <button class="ctrl" data-dir="left">←</button>
+                  <button class="ctrl" data-dir="down">↓</button>
+                  <button class="ctrl" data-dir="right">→</button>
+                </div>
+              </div>
+              <div class="legend" id="legend"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="rule-panel" id="rulePanel" aria-hidden="true">
+          <div class="rule-header">
+            <div class="rule-title">游戏规则</div>
+            <button class="close" id="closeRule">关闭</button>
+          </div>
+          <div class="rule-body" id="ruleBody"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
